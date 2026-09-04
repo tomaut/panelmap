@@ -84,7 +84,7 @@ let components=JSON.parse(localStorage.getItem('panelmap_components')||'null')||
 const seedHistory=[{"date": "02/09/2026 02:30", "user": "Sistema", "component": "—", "action": "Projeto inicial criado", "note": "Mapa digital carregado a partir das fotos do painel."}, {"date": "02/09/2026 02:31", "user": "Sistema", "component": "VFD-01", "action": "Identificação preliminar", "note": "Inversor Schneider Electric detectado visualmente. Modelo ainda não confirmado."}, {"date": "02/09/2026 02:32", "user": "Sistema", "component": "HMI-01", "action": "Identificação preliminar", "note": "IHM local registrada como ponto de operação e diagnóstico."}];
 let currentView='interior',selected=null;
 let historyData=JSON.parse(localStorage.getItem('panelmap_history')||'null')||seedHistory;
-const CLOUD_CONFIG={url:'gsjmhdwomooxapyzriul',key:'sb_publishable_DI12xSHVJtV034_YqOKMiA_tCECQxmT',workspace:'panelmap-principal'};
+const CLOUD_CONFIG={url:'https://oobuegenugopipzvffuu.supabase.co',key:'sb_publishable_8oqDrOFrH4eNwI0o5ElnSQ_jxdZcA0X',workspace:'panelmap-principal'};
 let cloudClient=null,cloudReady=false,cloudSyncTimer=null;
 function cloudConfigured(){return CLOUD_CONFIG.url.startsWith('https://')&&(CLOUD_CONFIG.key.startsWith('sb_publishable_')||CLOUD_CONFIG.key.startsWith('eyJ'))}
 async function initCloud(){
